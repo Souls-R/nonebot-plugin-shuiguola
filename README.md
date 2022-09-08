@@ -1,4 +1,4 @@
-# nonebot-plugin-shuiguole
+# nonebot-plugin-shuiguola
 水过了bot，正义查重姬
 
 当有人转发了已经发过的梗图/涩图时自动赶来嘲笑
