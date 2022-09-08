@@ -1,2 +1,24 @@
-# -nonebot-plugin-shuiguole
-水过了bot
+# nonebot-plugin-shuiguole
+水过了bot，正义查重姬
+
+当有人转发了已经发过的梗图/涩图时自动赶来嘲笑
+
+表情包每使用5次给发一颗小星星⭐
+
+## 食用方法
+没有上架商店~~代码太烂~~
+
+简单放在your_bot/src/plugin目录下即可，sqlite数据库保存在代码同级目录
+
+只在群聊有效，数据区分不同群聊
+
+向查重姬回复问号（包含?？关键字）查看上张梗图信息
+
+命令`/统计`查看top5图片数据(默认所有人拥有权限)
+
+## 相同图片识别
+默认按照file_id识别相同图片，可自行修改为dhash图片相似算法识别(更消耗资源)
+
+# 特别感谢
+- Mrs4s / go-cqhttp
+- nonebot / nonebot2
