@@ -1,3 +1,4 @@
+import os
 import nonebot
 from nonebot import logger, on_command, on_message
 from nonebot.adapters.onebot.v11 import Bot, MessageEvent, MessageSegment, Event, GroupMessageEvent
@@ -21,6 +22,8 @@ async def check_img(bot: Bot, event: Event, state: T_State) -> bool:
 
 last_pic_info = ""
 
+水过了path = os.path.join(os.path.dirname(__file__), '水过了.jpg')
+水烂了path = os.path.join(os.path.dirname(__file__), '水烂了.jpg')
 PicsRecv = on_message(rule=check_img, priority=5)
 
 
@@ -37,10 +40,9 @@ async def _(bot: Bot, event: MessageEvent, state: T_State):
             last_pic_info = "这张图上次水是在" + \
                 date.strftime("%Y-%m-%d %H:%M:%S") + ", 被水过了"+str(count)+"次"
             if count <= 4:
-                await PicsRecv.finish(MessageSegment.image(r"file:///C:\Users\23629\Desktop\temp\nonebot\shui\src\plugins\shuiguola\水过了.jpg"))
+                await PicsRecv.finish(MessageSegment.image('file:///'+水过了path))
             else:
-                await PicsRecv.finish(MessageSegment.image(r"file:///C:\Users\23629\Desktop\temp\nonebot\shui\src\plugins\shuiguola\水烂了.jpg"))
-        # 表情包每5次嘲笑一次
+                await PicsRecv.finish(MessageSegment.image('file:///'+水烂了path))
         elif msg == "old" and subType == '1':
             if count % 5 == 0:
                 last_pic_info = "这张表情包上次水是在" + \
