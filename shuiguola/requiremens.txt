@@ -1,4 +1,3 @@
-sqlite3
 sqlalchemy
 aiohttp
 opencv-python
